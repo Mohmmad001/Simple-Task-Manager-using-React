@@ -2,6 +2,12 @@
 
 A simple task manager built with React. You can add tasks, edit them, mark them as done, delete them, and filter them by status. Your tasks are saved in the browser, so they are still there after you refresh the page.
 
+## Live Demo
+
+🔗 **[Open the app on Netlify](https://my-task-react-project-task-manager.netlify.app/)**
+
+> **Note:** When you first open the link, you may see a **"404 page was not found"** message. This is expected, because the app has no page at the root address (`/`). Just click any of the navigation buttons (**All**, **Done**, or **Not Done**) and the app will take you to the correct page. The same applies if you refresh the page on a route like `/done`.
+
 ## Features
 
 - Add a new task with a title and details
@@ -69,7 +75,8 @@ Then open the local address shown in the terminal (usually `http://localhost:517
 ## Future Improvements
 
 - Generate unique task ids (for example, based on the highest existing id)
-- Redirect `/` to `/home`
+- Redirect `/` to `/home` so the 404 message no longer appears on first load
+- Add a Netlify redirects rule so refreshing on `/done` or `/not-done` works
 - Prevent adding empty tasks
 - Add due dates and priorities
 - Add search and sorting
