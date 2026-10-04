@@ -1,2 +1,77 @@
-Read me
-file 
+# My Tasks - React Task Manager
+
+A simple task manager built with React. You can add tasks, edit them, mark them as done, delete them, and filter them by status. Your tasks are saved in the browser, so they are still there after you refresh the page.
+
+## Features
+
+- Add a new task with a title and details
+- Edit a task using a popup (modal) form
+- Mark a task as done or not done
+- Delete a task
+- Filter tasks with three pages: **All**, **Done**, and **Not Done**
+- Tasks are saved automatically in `localStorage`
+
+## Tech Stack
+
+| Technology | Used for |
+|---|---|
+| React | Building the UI from components |
+| Vite | Project setup and dev server |
+| React Router (`react-router-dom`) | Navigation between All / Done / Not Done pages |
+| Context API (`createContext`, `useContext`) | Sharing the tasks list between components without prop drilling |
+| React Hooks (`useState`) | Managing tasks, form inputs, the active tab, and the task being edited |
+| localStorage | Saving tasks in the browser |
+| Material UI Icons (`@mui/icons-material`) | Check, Edit, and Delete icons |
+| CSS (Flexbox) | Styling and layout |
+
+## Project Structure
+
+```
+src/
+├── main.jsx        # Entry point, wraps the app in BrowserRouter
+├── App.jsx         # Global state, context provider, and routes
+├── Container.jsx   # Main layout box
+├── Header.jsx      # App title
+├── NavList.jsx     # Navigation tabs (All / Done / Not Done)
+├── All.jsx         # Page showing all tasks
+├── Done.jsx        # Page showing completed tasks
+├── NotDone.jsx     # Page showing unfinished tasks
+├── Task.jsx        # Single task card (check, edit, delete)
+├── AddTask.jsx     # Form for adding a new task
+└── EditTask.jsx    # Modal form for editing a task
+```
+
+Each component has its own CSS file.
+
+## How It Works
+
+- **State:** `App.jsx` holds the tasks list, the next task id, and the task currently being edited. These are shared through a context provider.
+- **Routing:** each filter page (`All`, `Done`, `NotDone`) reads the same tasks list and shows the tasks that match its filter.
+- **Persistence:** every time a task is added, edited, toggled, or deleted, the updated list is saved to `localStorage` and loaded again when the app starts.
+- **Reusable components:** `Task` is used by all three pages, so the card design and its actions live in one place.
+
+## Getting Started
+
+```bash
+# clone the repository
+git clone <your-repo-url>
+cd <your-project-folder>
+
+# install dependencies
+npm install
+
+# start the dev server
+npm run dev
+```
+
+Then open the local address shown in the terminal (usually `http://localhost:5173/home`).
+
+## Future Improvements
+
+- Generate unique task ids (for example, based on the highest existing id)
+- Redirect `/` to `/home`
+- Prevent adding empty tasks
+- Add due dates and priorities
+- Add search and sorting
+- Make the layout responsive for mobile screens
+- Add a confirmation before deleting a task
