@@ -1,0 +1,16 @@
+.container {
+  background-color: white;
+  height: 600px;
+  width: 450px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+}

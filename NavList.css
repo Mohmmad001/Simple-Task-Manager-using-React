@@ -1,0 +1,27 @@
+.navList {
+  margin: 5px;
+  border: 2px solid #ff000057;
+  margin-top: 10px;
+}
+
+button {
+  background-color: white;
+  border: none;
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+button:hover {
+  background-color: #ffc0cb6b;
+  border: none;
+  color: #800067;
+}
+
+button:nth-child(3) {
+  margin: 0px;
+}
+
+.active {
+  background-color: #ffc0cb6b;
+  color: #800067;
+}
