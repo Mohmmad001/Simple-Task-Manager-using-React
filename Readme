@@ -4,7 +4,7 @@ A simple task manager built with React. You can add tasks, edit them, mark them 
 
 ## Live Demo
 
-🔗 **[Open the app on Netlify](https://my-task-react-project-task-manager.netlify.app/)**
+🔗 **[Open the app on Netlify] https://my-task-react-project-task-manager.netlify.app/  **
 
 > **Note:** When you first open the link, you may see a **"404 page was not found"** message. This is expected, because the app has no page at the root address (`/`). Just click any of the navigation buttons (**All**, **Done**, or **Not Done**) and the app will take you to the correct page. The same applies if you refresh the page on a route like `/done`.
 
